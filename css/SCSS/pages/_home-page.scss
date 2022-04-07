@@ -1,0 +1,390 @@
+// --------------------------------------------------Section-1---------------------------------------------------------------
+.section-1{
+    margin-top: 25px;
+    .sec-1{
+        background-color: $Softblue;
+        position: relative;
+        width: 85%;
+        margin-left: auto;
+        padding: 25%;
+        border-bottom-left-radius: 50%;
+        
+        img{
+            width: 90%;
+            position: absolute;
+            top: -40px;
+            left: 0;
+            border: 10px solid black;
+            border-radius: 15px;
+        }
+    }
+    .sec-2{
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        margin-top: 35px;
+        .cont-1{
+            h1{
+                margin-bottom: 25px;
+            }
+            p{
+                color: $Grayishblue;
+                margin-bottom: 25px;
+            }
+        }
+        .cont-2{
+            display: flex;
+            justify-content: space-between;
+            a{
+                color: black;
+                box-shadow: 0px 5px 20px 1px #00000073;
+                border-radius: 7px;
+                padding: 15px ;
+                font-size: 14px;
+                &.chrome{
+                    background-color: $Softblue;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+// -----------------------------------------------------Section-1-media------------------------------------------------------
+@include large {
+    .section-1{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 150px;
+        width: 90%;
+        margin-left: auto;
+        .sec-1{
+            width: 40%;
+            padding: 11%;
+            img{
+                width: 95%;
+                top: -33%;
+                left: -33%;
+            }
+        }
+        .sec-2{
+            text-align: start;
+            width: 35%;
+            margin: 0;
+            .cont-1{
+                h1{
+                    font-size: 37px;
+                }
+               
+            }
+            .cont-2{
+                width: 63%;
+                a{
+                    &:hover{
+                        border: 1px solid $Verydarkblue;
+                        transition: 0.5s ease-out;
+                    }
+                    &.chrome{
+                        &:hover{
+                            background-color: transparent;
+                            border: 1px solid $Verydarkblue;
+                            color: $Verydarkblue;
+                            transition: 0.5s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// ---------------------------------------------------------section-2--------------------------------------------------------
+.section-2{
+    margin-top: 150px;
+    text-align: center;
+    .sec-1{
+        width: 86%;
+        margin: auto;
+        margin-bottom: 140px;
+        h2{
+            margin-bottom: 20px;
+        }
+        p{
+            color: $Grayishblue;
+            line-height: 25px;
+            margin-bottom: 45px;
+        }
+        ul{
+            li{
+                font-weight: bold;
+                color: $Grayishblue;
+                border-top: 1px solid $Grayishblue;
+                border-bottom: 1px solid $Grayishblue;
+                padding: 20px;
+                position: relative;
+                &.active {
+                    color: black;
+                }
+                &.active::after{
+                    content: "";
+                    position: absolute;
+                    width: 50%;
+                    height: 10%;
+                    background-color: $Softred;
+                    top: 100%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    
+                }
+            }
+        }
+    }
+    .sec-2{
+        .cont-1{
+            background-color: $Softblue;
+            width: 80%;
+            position: relative;
+            padding: 25%;
+            border-bottom-right-radius: 50%;
+            margin-bottom: 40px;
+            animation-name: to-right;
+            animation-duration: 0.7s;
+            animation-timing-function: linear;
+            img{
+                width: 100%;
+                position: absolute;
+                top: -44%;
+                right: -15%;
+            }
+        }
+        .cont-2{
+            width: 80%;
+            margin: auto;
+            animation-name: to-left;
+            animation-duration: 0.7s;
+            animation-timing-function: linear;
+            h2{
+                font-size: 25px;
+                margin-bottom: 25px;
+            }
+            p{
+                line-height: 25px;
+                color: $Grayishblue;
+            }
+        }
+    }
+}
+// ---------------------------------------------------section-2-media--------------------------------------------------------
+@include large{
+    .section-2{
+        .sec-1{
+            width: 40%;
+            margin-bottom: 190px;
+            ul{
+                display: flex;
+                justify-content: center;
+                
+                li{
+                    border-top: none;
+                    cursor: pointer;
+                    &:hover{
+                        color: $Softred;
+                    }
+                }
+            }
+        }
+        .sec-2{
+            display: flex;
+            .cont-1{
+                width: 40%;
+                padding: 11%;
+                margin-bottom: 0px;
+
+                img{
+                    width: 90%;
+                    top: -44%;
+                }
+            }
+            .cont-2{
+                width: 40%;
+                margin-top: 0;
+                text-align: start;
+            }
+        }
+    }
+
+}
+// ------------------------------------------------------section-3-------------------------------------------------------
+.section-3{
+   margin-top: 150px;
+   text-align: center;
+   .sec-1{
+       margin-bottom: 50px;
+        h2{
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        p{
+            color: $Grayishblue;
+            line-height: 25px;
+            width: 80%;
+            margin: auto;
+        }
+   }
+   .sec-2{
+        .card{
+            width: 80%;
+            margin: auto;
+            box-shadow: 0px 0px 60px -30px $Grayishblue;
+            margin-bottom: 25px;
+            padding: 50px 0 20px 0;
+            img,h3,p{   
+                margin-bottom: 15px;
+            }
+            a{
+                color: white;
+                background-color: $Softblue;
+                display: block;
+                width: 80%;
+                margin: auto;
+                padding: 20px 0;
+                border-radius: 7px;
+            }
+        }
+    }
+}
+// ---------------------------------------------------------section-3-media--------------------------------------------------
+@include large {
+    .section-3{
+
+        .sec-1{
+            margin-bottom: 70px;
+             p{
+
+                 width: 35%;
+             }
+        }
+        .sec-2{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 50px 50px 50px;
+            gap: 0px;
+            width: 70%;
+            margin: auto;
+            min-height: 80vh;
+            
+            .card{
+                padding: 90px 0 50px 0;
+                a{
+                    transition: 0.7s;
+                }
+                a:hover{
+                    color: $Softblue;
+                    background-color: white;
+                    border: 1px solid $Softblue;
+                }
+            }
+            .one{
+                grid-column: 1;
+                grid-row: 1 / 3;
+
+            }
+            .two{
+
+                grid-row: 2 /4;
+                grid-column: 2;
+            }
+            .three{
+                grid-row:  3;
+                grid-column: 3;
+            }
+         }
+     }
+}
+// --------------------------------------------------------------section-4---------------------------------------------------
+.section-4{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 150px;
+    .sec-1{
+        h2{
+            margin-bottom: 25px;
+        }
+        p{
+            color: $Grayishblue;
+            line-height: 25px;
+            margin-bottom: 25px;
+        }
+    }
+    .sec-2{
+        div{
+            text-align: start;
+            padding: 20px;
+            border-bottom: 1px solid $Grayishblue;
+        }
+        h5{
+            width: 100%;
+            position: relative;
+            transition: 0.7s rotate;
+            img{
+                position: absolute; 
+                right: -9%;
+                &.active{
+                transform: rotate(0.5turn);
+                }
+            }
+        }
+        p{
+            color: $Grayishblue;
+            margin-top: 25px;
+            line-height: 25px;
+        }
+        a{
+            background-color: $Softblue;
+            display: block;
+            width: fit-content;
+            padding: 15px 35px;
+            margin: auto;
+            margin-top: 45px;
+            color: white;
+            border-radius: 7px;
+        }
+    }
+}
+// ---------------------------------------------section-4-media-------------------------------------------------------------
+@include large {
+    .section-4{
+        width: 40%;
+
+        .sec-2{
+            h5{
+                img{
+                    right: 0%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@keyframes to-left {
+    0% {
+      transform: translateX(40%);
+    }
+    50% {
+      transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes to-right {
+    0% {
+      transform: translateX(-40%);
+    }
+    50% {
+      transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

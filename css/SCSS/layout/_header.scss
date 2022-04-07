@@ -1,0 +1,103 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0px;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    .logo {
+        z-index: 2;
+    }
+    .nav{
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+        text-align: center;
+        padding-top: 130px;
+        display: none;
+        background-color: #252b46eb;
+        .close{
+            position: absolute;
+            right: 10%;
+            top: 8%;
+        }
+        ul{
+            li{
+                padding: 15px 0;
+                width: 80%;
+                margin: auto;
+                border-top: 1px solid white;
+                text-transform: uppercase;
+                a{
+                    color: white;
+                    display: block;
+                    
+                    &.login{
+                        border: 1px solid white;
+                        padding: 15px 0;
+                    }
+                }
+                
+            }
+        }
+        .s-media{ 
+            display: flex;
+            justify-content: space-between;
+            width: 20%;
+            margin: auto;
+            margin-top: 120px;
+        }
+    }
+}
+// ------------------------------------------------Media-large--------------------------------------------------------
+@include large{
+    .header{
+        .nav-icon{
+            display: none;
+        }
+        .nav{
+            position: initial;
+            display: initial;
+            
+            .close{
+                display: none;
+            }
+            ul{
+                display: flex;
+                gap: 50px; 
+                li{
+                    padding: 0 ;
+                    width: 100%;
+                    a{
+                        color: $Verydarkblue;
+                        border: none;
+                        &:hover{
+                            color: $Softred;
+                        }
+                        &.login{
+                            border: none;
+                            background-color: $Softred;
+                            padding: 10px 20px;
+                            border-radius: 7px;
+                            color: white;
+                            transition: 1s ease-out;
+                            &:hover{
+                                color: $Softred;
+                                background-color: transparent;
+                                border: 1px solid $Softred;
+                                transition: 0.5s ease-in-out;
+                            }
+                        }
+                    }  
+                }
+            }
+            .s-media{ 
+                display: none;
+            }
+        }
+    }
+}

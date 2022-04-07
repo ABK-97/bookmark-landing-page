@@ -1,0 +1,168 @@
+footer{
+    margin-top: 150px;
+    text-align: center;
+    .sec-1{
+        .cont-1{
+            background-color: $Softblue;
+            padding-top: 60px;
+            padding-bottom: 40px;
+            .p{
+                color: white;
+                letter-spacing: 5px;
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+            h4{
+                color: white;
+                font-weight: normal;
+                font-size: 25px;
+                width: 90%;
+                margin: auto;
+                margin-bottom: 10px;
+            }
+            .input-filed{
+                background-color: $Softred;
+                width: 90%;
+                margin: auto;
+                text-align: start;
+                border-radius: 7px;
+                position: relative;
+                padding: 5px;
+                color: white;
+                input{
+                    width: 100%;
+                    padding: 10px;
+                }
+                img{
+                    position: absolute;
+                    right: 5%;
+                    top: 20%;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+            a{
+                display: block;
+                background-color: $Softred;
+                width: 90%;
+                margin: auto;
+                margin-top: 25px;
+                padding: 15px 0;
+                color: white;
+                border-radius: 7px;
+            }
+        }
+        .cont-2{
+            background-color: $Verydarkblue;
+            color: white;
+            padding: 50px 0;
+            .logo-nav{
+                margin-bottom: 40px;
+                ul{
+                    margin: 20px 0;
+                    li{
+                        color: $Grayishblue;
+                        margin: 30px 0;
+                    }
+                }
+            }
+            .social-media{
+                display: flex;
+                justify-content: space-between;
+                width: 20%;
+                margin: auto;
+            }
+        }
+    }
+    .attribution{
+        background-color: $Softred;
+        padding: 25px;
+        color: white;
+        a{
+            color: $Verydarkblue;
+            text-decoration: underline;
+            
+        }
+    }
+}
+// ---------------------------------------------------------footer-maedia--------------------------------------------------
+@include large{
+    footer{
+        .sec-1{
+            .cont-1{
+                .p{
+                    font-size: 20px;
+                }
+                h4{
+                    font-size: 25px;
+                    width: 24%;
+                }
+                .input-filed{
+                    width: 24%;
+                    p{
+                        font-size: 14px;
+                    }
+                    
+                }
+                a{
+                    width: 24%;
+                    transition: 0.7s;
+                    &:hover{
+                        background-color: white;
+                        border: 1px solid $Softred;
+                        color: $Softred;
+                        
+                    }
+
+                }
+            }
+            .cont-2{
+                background-color: $Verydarkblue;
+                color: white;
+                padding:  35px;
+                display: flex;
+                justify-content: space-between;
+                .logo-nav{
+                    margin-bottom: 5px;
+                    display: flex;
+                    gap: 25px;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 80%;
+                    padding: 0px;
+                    img{
+                        width: 148px;
+                        height: 25px;
+                    }
+                    ul{
+                        margin:  0;
+                        display: flex;
+                        gap: 30px;
+                        li{
+                            color: $Grayishblue;
+                            margin: 0;
+                            cursor: pointer;
+                            &:hover{
+                                color: $Softred;
+                            }
+                        }
+                    }
+                }
+                .social-media{
+                    display: flex;
+                    width: 5%;
+                }
+            }
+        }
+        .attribution{
+            background-color: $Softred;
+            padding: 25px;
+            color: white;
+            a{
+                color: $Verydarkblue;
+                text-decoration: underline;
+            }
+        }
+    }
+}
